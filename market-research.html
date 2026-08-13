@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Hub | Supradip Das</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #020617; color: #f8fafc; }
+        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* Hide scrollbar for the horizontal slider */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="w-full glass-card border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="SITEEXP3.HTML" class="text-slate-400 hover:text-blue-400 transition flex items-center font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Main Portfolio
+            </a>
+            <span class="text-xl font-bold text-white">SD.</span>
+        </div>
+    </nav>
+
+    <header class="py-20 border-b border-slate-800 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] -translate-x-1/2"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600/20 text-blue-400 mb-6 border border-blue-500/30">
+                <i class="fas fa-search text-2xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Market Research Hub</h1>
+            <p class="text-lg text-slate-400">Deep dives into qualitative and quantitative methodologies, mapping competitive landscapes, and uncovering consumer behavior.</p>
+            
+            <div class="mt-8">
+                <a href="Supradip_CV_Market_Research.pdf" target="_blank" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-blue-500/30 transition hover:scale-105 border border-blue-400/50">
+                    <i class="fas fa-file-download mr-3 text-xl"></i> Download Market Research CV
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 max-w-6xl mx-auto px-6 overflow-hidden">
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-2xl font-bold border-l-4 border-blue-500 pl-4">Featured Case Studies</h2>
+            <span class="text-sm text-slate-500 animate-pulse hidden md:block"><i class="fas fa-arrows-left-right mr-2"></i>Swipe to explore</span>
+        </div>
+        
+        <div class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar cursor-pointer">
+            
+            <a href="project-itc.html" class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition duration-300 min-w-[320px] md:min-w-[450px] shrink-0 snap-center group flex flex-col">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition">ITC Competitor Landscape Analysis</h3>
+                    <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded border border-blue-500/30 ml-4">Quantitative</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-6 flex-grow">
+                    A comprehensive study on the competitors of the pens and premium portfolio of the ITC ESPB division in Siliguri.
+                </p>
+                <div class="flex items-center text-sm font-semibold text-white bg-slate-800 group-hover:bg-blue-600 px-4 py-3 rounded-lg transition duration-300 w-fit">
+                    Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+                </div>
+            </a>
+
+            <a href="#" class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition duration-300 min-w-[320px] md:min-w-[450px] shrink-0 snap-center group flex flex-col">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition">Consumer Purchase Behavior Study</h3>
+                    <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded border border-blue-500/30 ml-4">Mixed-Methods</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-6 flex-grow">
+                    In-depth qualitative and quantitative research performed in Pune to identify different needs affecting the purchase behavior of pens.
+                </p>
+                <div class="flex items-center text-sm font-semibold text-white bg-slate-800 group-hover:bg-blue-600 px-4 py-3 rounded-lg transition duration-300 w-fit">
+                    Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+                </div>
+            </a>
+
+            <div class="glass-card p-8 rounded-2xl border border-slate-800 border-dashed flex flex-col items-center justify-center text-center hover:bg-slate-800/30 transition cursor-pointer min-w-[320px] md:min-w-[450px] shrink-0 snap-center group">
+                <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition">
+                    <i class="fas fa-plus text-slate-400 group-hover:text-blue-400 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-300 mb-2">Add New Case Study</h3>
+                <p class="text-xs text-slate-500">Update code to add a new project link.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="py-16 max-w-6xl mx-auto px-6 border-t border-slate-800">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-blue-500 pl-4">Articles & Insights</h2>
+        
+        <div class="space-y-6">
+            <article class="glass-card p-6 rounded-xl border border-slate-800 hover:border-blue-500/50 transition group">
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-blue-400 text-xs font-semibold mb-1">April 12, 2026</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition cursor-pointer">
+                            The Power of Attribute-Based Perceptual Mapping (ABPM) in Retail
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2 max-w-3xl">
+                            How visualizing product positioning helps identify critical market gaps before launching new CPG products...
+                        </p>
+                    </div>
+                    <a href="#" class="text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 px-5 py-2 rounded-lg transition whitespace-nowrap">
+                        Read Article
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-slate-800 text-center text-slate-600 text-sm mt-12">
+        <p>&copy; 2026 Supradip Das. Market Research Domain.</p>
+    </footer>
+
+</body>
+</html>

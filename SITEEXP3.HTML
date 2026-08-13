@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supradip Das | Strategic Product & Analytics Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #020617; /* Slate 950 */
+            color: #f8fafc;
+        }
+        
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline Line */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #10b981, #f59e0b, #ef4444);
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .timeline-line { display: none; }
+        }
+        
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* File Upload Button Hover */
+        .upload-btn:hover i {
+            transform: translateY(-2px);
+            transition: transform 0.2s;
+        }
+
+        /* NEW: Hide scrollbar for the horizontal slider */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-card border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-2xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">SD.</span>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#hero" class="hover:text-blue-400 transition">Home</a>
+                <a href="#journey" class="hover:text-blue-400 transition">The Journey</a>
+                <a href="#works" class="hover:text-blue-400 transition">Portfolio Works</a>
+                <a href="#resume" class="hover:text-blue-400 transition">Experience</a>
+            </div>
+            <a href="mailto:Supradipdasslg016@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-blue-500/30">Get in Touch</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="absolute top-1/4 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-emerald-600/20 rounded-full blur-[100px]"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-12 animate-on-scroll">
+            
+            <div class="md:w-3/5 text-left">
+                <div class="inline-block px-4 py-1.5 rounded-full border border-slate-700 bg-slate-800/50 text-sm text-slate-300 mb-6">
+                    <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i> Navi Mumbai, Maharashtra
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+                    Data drives the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Insights.</span><br>
+                    Insights build the <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-400">Product.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl">
+                    I don't just analyze data. I translate complex market insights into actionable business strategies, guiding the product lifecycle from initial research to multi-crore revenue generation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#works" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-semibold transition shadow-lg shadow-blue-500/30">
+                        View My Work
+                    </a>
+                    <a href="#journey" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-full border border-slate-700 font-semibold transition">
+                        Explore Journey
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-2/5 flex justify-center mt-12 md:mt-0">
+                <div class="md:w-5/6 flex justify-center mt-12 md:mt-0">
+                    <div class="relative w-90 h-96 md:w-[400px] md:h-[650px] rounded-2xl p-2 border-4 border-slate-800 bg-slate-900/50 flex items-center justify-center shadow-2xl shadow-blue-500/20 group overflow-hidden">
+                        <img src="pic.png" alt="Supradip Das" class="w-full h-full object-cover rounded-x4 relative z-10"> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="journey" class="py-24 relative px-6 bg-slate-900/30 border-y border-slate-800/50">
+        <div class="max-w-6xl mx-auto text-center mb-20 animate-on-scroll">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">My Multidisciplinary Journey</h2>
+            <p class="text-slate-400 max-w-xl mx-auto">Connecting the dots across four core domains to create end-to-end business value.</p>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto">
+            <div class="timeline-line hidden md:block"></div>
+
+            <div class="flex flex-col md:flex-row items-center w-full mb-20 relative animate-on-scroll">
+                <div class="md:w-1/2 w-full md:pr-16 text-left md:text-right">
+                    <p class="text-blue-500 font-bold tracking-widest text-sm mb-2">DOMAIN 01</p>
+                    <h3 class="text-3xl font-bold text-white mb-4">Market Research</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        It starts with understanding the consumer. Through rigorous qualitative and quantitative methodologies, I map the competitive landscape to identify market gaps before a product even takes shape.
+                    </p>
+                </div>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-600 rounded-full border-4 border-[#020617] items-center justify-center z-10 shadow-lg shadow-blue-500/50">
+                    <i class="fas fa-search text-white text-sm"></i>
+                </div>
+                <div class="md:w-1/2 w-full md:pl-16 mt-6 md:mt-0"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center w-full mb-20 relative animate-on-scroll">
+                <div class="md:w-1/2 w-full md:pl-16 text-left">
+                    <p class="text-emerald-500 font-bold tracking-widest text-sm mb-2">DOMAIN 02</p>
+                    <h3 class="text-3xl font-bold text-white mb-4">Data Analysis</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Data without interpretation is noise. I leverage tools like SPSS and Power BI to transform raw survey data into actionable strategies, pinpointing highly attractive market segments.
+                    </p>
+                </div>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-emerald-500 rounded-full border-4 border-[#020617] items-center justify-center z-10 shadow-lg shadow-emerald-500/50">
+                    <i class="fas fa-chart-pie text-white text-sm"></i>
+                </div>
+                <div class="md:w-1/2 w-full md:pr-16 mt-6 md:mt-0"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center w-full mb-20 relative animate-on-scroll">
+                <div class="md:w-1/2 w-full md:pr-16 text-left md:text-right">
+                    <p class="text-amber-500 font-bold tracking-widest text-sm mb-2">DOMAIN 03</p>
+                    <h3 class="text-3xl font-bold text-white mb-4">Product Management</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Insights drive development. Bridging the gap between data analysis and real-world application, I focus on building user-centric solutions and digital products that address unique consumer needs.
+                    </p>
+                </div>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-amber-500 rounded-full border-4 border-[#020617] items-center justify-center z-10 shadow-lg shadow-amber-500/50">
+                    <i class="fas fa-cube text-white text-sm"></i>
+                </div>
+                <div class="md:w-1/2 w-full md:pl-16 mt-6 md:mt-0"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center w-full relative animate-on-scroll">
+                <div class="md:w-1/2 w-full md:pl-16 text-left">
+                    <p class="text-red-500 font-bold tracking-widest text-sm mb-2">DOMAIN 04</p>
+                    <h3 class="text-3xl font-bold text-white mb-4">Marketing Strategy</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        A great product demands powerful execution. I translate strategic positioning into tangible growth, activating channels and driving targeted campaigns to generate massive revenue.
+                    </p>
+                </div>
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full border-4 border-[#020617] items-center justify-center z-10 shadow-lg shadow-red-500/50">
+                    <i class="fas fa-chart-line text-white text-sm"></i>
+                </div>
+                <div class="md:w-1/2 w-full md:pr-16 mt-6 md:mt-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="py-32 relative px-6">
+        <div class="max-w-6xl mx-auto animate-on-scroll">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">Featured Works & Case Studies</h2>
+            <p class="text-slate-400 max-w-xl mx-auto text-center mb-16">Explore the tangible results, dashboards, and research documentation across my core domains.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-blue-500 hover:bg-slate-800/80 transition duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white">Market Research</h3>
+                        <i class="fas fa-search text-blue-500 text-2xl opacity-50"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Deep dives into consumer surveys, competitive landscapes, and primary market data. Includes the ITC ESPB division competitor study.
+                    </p>
+                    <a href="market-research.html" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl transition duration-300 font-semibold text-sm">
+                        <i class="fas fa-arrow-right mr-2"></i> Enter Market Research Hub
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-emerald-500 hover:bg-slate-800/80 transition duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white">Data Analysis</h3>
+                        <i class="fas fa-chart-pie text-emerald-500 text-2xl opacity-50"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Dashboards, statistical modeling, and insights derived from Cluster and Factor Analysis for consumer behavior mapping.
+                    </p>
+                    <a href="data-analysis.html" class="block w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl transition duration-300 font-semibold text-sm">
+                        <i class="fas fa-arrow-right mr-2"></i> Enter Data Analysis Hub
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-amber-500 hover:bg-yellow-800/80 transition duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white">Product Management</h3>
+                        <i class="fas fa-cube text-amber-500 text-2xl opacity-50"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Product Requirement Documents (PRDs), feature roadmaps, and details on digital hubs like MbaExtras.
+                    </p>
+                    <a href="product-management.html" class="block w-full text-center bg-amber-600 hover:bg-amber-500 text-white py-3 rounded-xl transition duration-300 font-semibold text-sm">
+                        <i class="fas fa-arrow-right mr-2"></i> Enter Product Management Hub
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-amber-500 hover:bg-stale-800/80 transition duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white">Marketing Strategy</h3>
+                        <i class="fas fa-cube text-amber-500 text-2xl opacity-50"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Ene-to-End marketing strategy woth digital aspects.
+                    </p>
+                    <a href="marketing-strategy.html" class="block w-full text-center bg-red-600 hover:bg-amber-500 text-white py-3 rounded-xl transition duration-300 font-semibold text-sm">
+                        <i class="fas fa-arrow-right mr-2"></i> Enter marketing strategy Hub
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border-t-4 border-amber-500 hover:bg-yellow-800/80 transition duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white">AI</h3>
+                        <i class="fas fa-cube text-amber-500 text-2xl opacity-50"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        This is the future you are learning.
+                    </p>
+                    <a href="product-management.html" class="block w-full text-center bg-yellow-600 hover:bg-amber-500 text-white py-3 rounded-xl transition duration-300 font-semibold text-sm">
+                        <i class="fas fa-arrow-right mr-2"></i> Enter AI Hub
+                    </a>
+                </div>
+
+    </section>
+
+   <section id="certifications" class="py-24 bg-slate-900/50 border-t border-slate-800 px-6">
+        <div class="max-w-6xl mx-auto animate-on-scroll">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-3xl font-bold text-white">Licenses & Certifications</h2>
+                <span class="text-sm text-slate-500"><i class="fas fa-arrows-left-right mr-2"></i>Swipe & click to explore</span>
+            </div>
+            
+            <div class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory no-scrollbar">
+                
+                <a href="cert-powerbi.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-chart-bar text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">Microsoft Power BI</h4>
+                        <p class="text-xs text-slate-500">Udemy (2025)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-ai.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-robot text-emerald-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">AI in Marketing</h4>
+                        <p class="text-xs text-slate-500">NPTL (2025)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-excel.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-table text-green-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">Advanced Excel</h4>
+                        <p class="text-xs text-slate-500">Udemy (2024)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-supplychain.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-truck-fast text-amber-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">Supply Chain Fundamentals</h4>
+                        <p class="text-xs text-slate-500">Udemy (2024)</p>
+                    </div>
+                </a>
+
+                <a href="certifications.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center border-dashed group">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-cyan-500/20 transition">
+                        <i class="fas fa-plus text-slate-500 text-xl group-hover:text-cyan-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-400 text-sm group-hover:text-cyan-400 transition">View All / Add New</h4>
+                        <p class="text-xs text-slate-600">Go to Cert Hub</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+     <section id="case-studies" class="py-24 bg-slate-900/50 border-t border-slate-800 px-6">
+        <div class="max-w-6xl mx-auto animate-on-scroll">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-3xl font-bold text-white">Case-Studies</h2>
+                <span class="text-sm text-slate-500"><i class="fas fa-arrows-left-right mr-2"></i>Swipe & click to explore</span>
+            </div>
+            
+            <div class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory no-scrollbar">
+                
+                <a href="cert-powerbi.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-chart-bar text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">Microsoft Power BI</h4>
+                        <p class="text-xs text-slate-500">Udemy (2025)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-ai.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-robot text-emerald-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">AI in Marketing</h4>
+                        <p class="text-xs text-slate-500">NPTL (2025)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-excel.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-table text-green-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">Advanced Excel</h4>
+                        <p class="text-xs text-slate-500">Udemy (2024)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-supplychain.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center group">
+                    <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-truck-fast text-amber-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 text-sm group-hover:text-cyan-400 transition">Supply Chain Fundamentals</h4>
+                        <p class="text-xs text-slate-500">Udemy (2024)</p>
+                    </div>
+                </a>
+
+                <a href="certifications.html" class="glass-card p-6 rounded-xl flex items-center hover:border-cyan-500 hover:bg-slate-800/50 transition cursor-pointer min-w-[300px] shrink-0 snap-center border-dashed group">
+                    <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-cyan-500/20 transition">
+                        <i class="fas fa-plus text-slate-500 text-xl group-hover:text-cyan-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-400 text-sm group-hover:text-cyan-400 transition">View All / Add New</h4>
+                        <p class="text-xs text-slate-600">Go to Cert Hub</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="py-32 border-t border-slate-800 px-6">
+        <div class="max-w-4xl mx-auto animate-on-scroll">
+            <h2 class="text-3xl font-bold mb-12 text-center">Professional Experience</h2>
+            
+            <div class="space-y-8">
+                <div class="glass-card p-8 rounded-2xl hover:border-slate-600 transition border border-slate-800">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Assistant Manager <span class="text-slate-500">| Xanadu Realty</span></h3>
+                        </div>
+                        <span class="text-sm text-blue-400 font-semibold mt-2 md:mt-0">Feb 2025 – Present</span>
+                    </div>
+                    <ul class="list-none space-y-2 text-slate-400 text-sm">
+                        <li><i class="fas fa-angle-right text-blue-500 mr-2"></i> Drove over 200 walk-ins... directly resulting in a total revenue of ₹21 crores.</li>
+                        <li><i class="fas fa-angle-right text-blue-500 mr-2"></i> Cultivated and managed relationships with over 200 channel partners in Navi Mumbai.</li>
+                        <li><i class="fas fa-angle-right text-blue-500 mr-2"></i> Led and mentored a three-person pre-sales team, generating over 60 walk-ins.</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:border-slate-600 transition border border-slate-800">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Sales and Marketing Intern <span class="text-slate-500">| ITC Ltd.</span></h3>
+                        </div>
+                        <span class="text-sm text-blue-400 font-semibold mt-2 md:mt-0">June 2023 - Aug 2023</span>
+                    </div>
+                    <ul class="list-none space-y-2 text-slate-400 text-sm">
+                        <li><i class="fas fa-angle-right text-blue-500 mr-2"></i> Successfully boosted M-O-M sales volume of premium portfolio of 'ESPB' division by 21 percent.</li>
+                        <li><i class="fas fa-angle-right text-blue-500 mr-2"></i> Executed a comprehensive sales forecast for future business strategies.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm bg-[#020617]">
+        <p>&copy; 2026 Supradip Das. Built for Strategic Analytics.</p>
+        <div class="mt-4 flex justify-center space-x-4">
+            <a href="https://linkedin.com/in/Supradip-das" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-xl"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

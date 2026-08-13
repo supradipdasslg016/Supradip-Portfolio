@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Hub | Supradip Das</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #020617; color: #f8fafc; }
+        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="w-full glass-card border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="javascript:history.back()" class="text-slate-400 hover:text-emerald-400 transition flex items-center font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Main Portfolio
+            </a>
+            <span class="text-xl font-bold text-white">SD.</span>
+        </div>
+    </nav>
+
+    <header class="py-20 border-b border-slate-800 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-96 h-96 bg-emerald-600/10 rounded-full blur-[100px] -translate-x-1/2"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-600/20 text-emerald-400 mb-6 border border-emerald-500/30">
+                <i class="fas fa-chart-pie text-2xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Data Analysis Hub</h1>
+            <p class="text-lg text-slate-400">Transforming raw survey data into actionable strategies using advanced statistical modeling, Excel, and Power BI dashboards.</p>
+        </div>
+    </header>
+
+    <section class="py-16 max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4">Featured Dashboards & Models</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-white">Consumer Purchase Behavior Mapping</h3>
+                    <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded border border-emerald-500/30">Cluster Analysis</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-6">
+                    Leveraged factor and cluster analysis to identify two distinct consumer segments based on unique needs and preferences. Utilized 'Segment Attractiveness' modeling to pinpoint the highest-value targets.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm transition flex items-center border border-slate-600">
+                        <i class="fas fa-file-excel mr-2 text-emerald-400"></i> View Data Model
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border border-slate-800 border-dashed flex flex-col items-center justify-center text-center hover:bg-slate-800/30 transition cursor-pointer">
+                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                    <i class="fas fa-plus text-slate-400"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-300 mb-2">Upload New Analysis</h3>
+                <p class="text-xs text-slate-500">Add a new Power BI dashboard link, SPSS output, or dataset.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 max-w-6xl mx-auto px-6 border-t border-slate-800">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4">Methodology & Insights</h2>
+        
+        <div class="space-y-6">
+            <article class="glass-card p-6 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition group">
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-emerald-400 text-xs font-semibold mb-1">April 12, 2026</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition cursor-pointer">
+                            Demystifying Segment Attractiveness Analysis
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2 max-w-3xl">
+                            How I use cluster analysis to shift from generic marketing to highly targeted, data-backed segmentation strategies...
+                        </p>
+                    </div>
+                    <a href="#" class="text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-500 px-5 py-2 rounded-lg transition whitespace-nowrap">
+                        Read Article
+                    </a>
+                </div>
+            </article>
+
+            <article class="glass-card p-6 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition group">
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-emerald-400 text-xs font-semibold mb-1">Placeholder Date</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition cursor-pointer">
+                            [Your Data Article Title]
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2 max-w-3xl">
+                            Discuss your workflows using SPSS or Microsoft Power BI here...
+                        </p>
+                    </div>
+                    <a href="#" class="text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 px-5 py-2 rounded-lg border border-slate-600 transition whitespace-nowrap">
+                        Write Article
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-slate-800 text-center text-slate-600 text-sm mt-12">
+        <p>&copy; 2026 Supradip Das. Data Analysis Domain.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Hub | Supradip Das</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #020617; color: #f8fafc; }
+        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="w-full glass-card border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="javascript:history.back()" class="text-slate-400 hover:text-amber-400 transition flex items-center font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Main Portfolio
+            </a>
+            <span class="text-xl font-bold text-white">SD.</span>
+        </div>
+    </nav>
+
+    <header class="py-20 border-b border-slate-800 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-96 h-96 bg-amber-600/10 rounded-full blur-[100px] -translate-x-1/2"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-600/20 text-amber-400 mb-6 border border-amber-500/30">
+                <i class="fas fa-cube text-2xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Product Management Hub</h1>
+            <p class="text-lg text-slate-400">Bridging the gap between data analysis and real-world application to build user-centric solutions and strategic product positioning.</p>
+        </div>
+    </header>
+
+    <section class="py-16 max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-amber-500 pl-4">Products & Roadmaps</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-white">MbaExtras Portal Development</h3>
+                    <span class="text-xs bg-amber-500/20 text-amber-400 px-2 py-1 rounded border border-amber-500/30">Web Platform</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-6">
+                    Conceptualized and created a dedicated website via Odoo.com to provide targeted educational content for BBA, MBA, and professional individuals.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm transition flex items-center border border-slate-600">
+                        <i class="fas fa-link mr-2 text-amber-400"></i> Visit MbaExtras
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border border-slate-800 border-dashed flex flex-col items-center justify-center text-center hover:bg-slate-800/30 transition cursor-pointer">
+                <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                    <i class="fas fa-plus text-slate-400"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-300 mb-2">Upload PRD / Case Study</h3>
+                <p class="text-xs text-slate-500">Add a new Product Requirement Document, Marketing Mix strategy, or roadmap.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 max-w-6xl mx-auto px-6 border-t border-slate-800">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-amber-500 pl-4">Product Thinking</h2>
+        
+        <div class="space-y-6">
+            <article class="glass-card p-6 rounded-xl border border-slate-800 hover:border-amber-500/50 transition group">
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-amber-400 text-xs font-semibold mb-1">April 12, 2026</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition cursor-pointer">
+                            Developing a Tailored Marketing Mix
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2 max-w-3xl">
+                            Translating cluster analysis insights into actionable product positioning and promotional strategies...
+                        </p>
+                    </div>
+                    <a href="#" class="text-sm font-semibold text-white bg-amber-600 hover:bg-amber-500 px-5 py-2 rounded-lg transition whitespace-nowrap">
+                        Read Article
+                    </a>
+                </div>
+            </article>
+
+            <article class="glass-card p-6 rounded-xl border border-slate-800 hover:border-amber-500/50 transition group">
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-amber-400 text-xs font-semibold mb-1">Placeholder Date</p>
+                        <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition cursor-pointer">
+                            [Your Product Strategy Title]
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2 max-w-3xl">
+                            Write about developing new digital products or mapping user journeys...
+                        </p>
+                    </div>
+                    <a href="#" class="text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 px-5 py-2 rounded-lg border border-slate-600 transition whitespace-nowrap">
+                        Write Article
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-slate-800 text-center text-slate-600 text-sm mt-12">
+        <p>&copy; 2026 Supradip Das. Product Management Domain.</p>
+    </footer>
+
+</body>
+</html>

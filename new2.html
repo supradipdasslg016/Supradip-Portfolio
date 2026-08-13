@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supradip Das | Strategic Product & Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Deep black background */
+            color: #ededed;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Subtle Grid Background */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+
+        /* Bento Box Cards */
+        .bento-card {
+            background-color: #121212;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bento-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+        }
+
+        /* Subtle Glow Effect on Hover */
+        .bento-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .bento-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Accent Colors */
+        .text-accent-blue { color: #60a5fa; }
+        .text-accent-emerald { color: #34d399; }
+        .text-accent-amber { color: #fbbf24; }
+        .text-accent-red { color: #f87171; }
+
+        .bg-accent-blue { background-color: rgba(96, 165, 250, 0.1); border: 1px solid rgba(96, 165, 250, 0.2); }
+        .bg-accent-emerald { background-color: rgba(52, 211, 153, 0.1); border: 1px solid rgba(52, 211, 153, 0.2); }
+        .bg-accent-amber { background-color: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2); }
+        .bg-accent-red { background-color: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.2); }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-grid">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-4 px-6">
+        <div class="max-w-5xl mx-auto flex justify-between items-center bg-[#1a1a1a]/80 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 shadow-lg">
+            <span class="text-xl font-bold tracking-tight text-white">SD.</span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#hero" class="hover:text-white transition">Home</a>
+                <a href="#journey" class="hover:text-white transition">Journey</a>
+                <a href="#works" class="hover:text-white transition">Work</a>
+                <a href="#resume" class="hover:text-white transition">Experience</a>
+            </div>
+            <a href="mailto:Supradipdasslg016@gmail.com" class="bg-white text-black hover:bg-gray-200 px-5 py-2 rounded-full text-sm font-semibold transition">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="relative min-h-[90vh] flex items-center pt-24 px-6">
+        <div class="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 reveal active">
+            
+            <div class="md:w-3/5 text-left z-10">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-gray-400 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
+                    Based in Navi Mumbai, MH
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-[1.1] text-white">
+                    Data drives the insights.<br>
+                    <span class="text-gray-500">Insights build the product.</span>
+                </h1>
+                
+                <p class="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed">
+                    I translate complex market insights into actionable business strategies, guiding the product lifecycle from initial research to multi-crore revenue generation.
+                </p>
+                
+                <div class="flex gap-4">
+                    <a href="#works" class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full font-semibold transition flex items-center gap-2">
+                        View Projects <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Minimal Profile Image -->
+            <div class="md:w-2/5 flex justify-end">
+                <div class="w-72 h-[450px] rounded-[32px] overflow-hidden border border-white/10 relative group">
+                    <img src="pic.png" alt="Supradip Das" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500"> 
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- The Journey (Bento Grid Style) -->
+    <section id="journey" class="py-24 px-6 relative z-10">
+        <div class="max-w-5xl mx-auto reveal">
+            <h2 class="text-3xl font-bold mb-2 text-white tracking-tight">Multidisciplinary Approach</h2>
+            <p class="text-gray-400 mb-12">Connecting the dots across four core domains.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Domain 1 -->
+                <div class="bento-card p-6 flex flex-col h-full">
+                    <div class="w-10 h-10 rounded-full bg-accent-blue flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-accent-blue text-sm"></i>
+                    </div>
+                    <p class="text-accent-blue font-semibold text-xs tracking-wider mb-2">01</p>
+                    <h3 class="text-lg font-bold text-white mb-3">Market Research</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mt-auto">
+                        Mapping the competitive landscape through rigorous methodologies to identify gaps before a product takes shape.
+                    </p>
+                </div>
+
+                <!-- Domain 2 -->
+                <div class="bento-card p-6 flex flex-col h-full lg:-translate-y-4">
+                    <div class="w-10 h-10 rounded-full bg-accent-emerald flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-accent-emerald text-sm"></i>
+                    </div>
+                    <p class="text-accent-emerald font-semibold text-xs tracking-wider mb-2">02</p>
+                    <h3 class="text-lg font-bold text-white mb-3">Data Analysis</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mt-auto">
+                        Leveraging SPSS and Power BI to transform raw survey data into strategies, pinpointing attractive segments.
+                    </p>
+                </div>
+
+                <!-- Domain 3 -->
+                <div class="bento-card p-6 flex flex-col h-full">
+                    <div class="w-10 h-10 rounded-full bg-accent-amber flex items-center justify-center mb-6">
+                        <i class="fas fa-cube text-accent-amber text-sm"></i>
+                    </div>
+                    <p class="text-accent-amber font-semibold text-xs tracking-wider mb-2">03</p>
+                    <h3 class="text-lg font-bold text-white mb-3">Product Mgmt</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mt-auto">
+                        Bridging data and application to build user-centric solutions and digital products addressing consumer needs.
+                    </p>
+                </div>
+
+                <!-- Domain 4 -->
+                <div class="bento-card p-6 flex flex-col h-full lg:translate-y-4">
+                    <div class="w-10 h-10 rounded-full bg-accent-red flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-accent-red text-sm"></i>
+                    </div>
+                    <p class="text-accent-red font-semibold text-xs tracking-wider mb-2">04</p>
+                    <h3 class="text-lg font-bold text-white mb-3">Marketing Strategy</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mt-auto">
+                        Translating positioning into tangible growth, activating channels to generate massive revenue.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Works -->
+    <section id="works" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto reveal">
+            <h2 class="text-3xl font-bold mb-2 text-white tracking-tight">Selected Works</h2>
+            <p class="text-gray-400 mb-12">Dashboards, research, and documentation.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Work 1 -->
+                <a href="market-research.html" class="bento-card p-8 group flex flex-col">
+                    <div class="flex justify-between items-start mb-16">
+                        <div class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs text-gray-300">Case Study</div>
+                        <i class="fas fa-arrow-right text-gray-600 group-hover:text-white -rotate-45 group-hover:rotate-0 transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Market Research</h3>
+                        <p class="text-gray-400 text-sm">Consumer surveys and competitive landscapes, including the ITC ESPB division competitor study.</p>
+                    </div>
+                </a>
+
+                <!-- Work 2 -->
+                <a href="data-analysis.html" class="bento-card p-8 group flex flex-col">
+                    <div class="flex justify-between items-start mb-16">
+                        <div class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs text-gray-300">Dashboard</div>
+                        <i class="fas fa-arrow-right text-gray-600 group-hover:text-white -rotate-45 group-hover:rotate-0 transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Data Analysis</h3>
+                        <p class="text-gray-400 text-sm">Statistical modeling and insights derived from Cluster and Factor Analysis.</p>
+                    </div>
+                </a>
+
+                <!-- Work 3 -->
+                <a href="product-management.html" class="bento-card p-8 group flex flex-col">
+                    <div class="flex justify-between items-start mb-16">
+                        <div class="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-xs text-gray-300">PRD</div>
+                        <i class="fas fa-arrow-right text-gray-600 group-hover:text-white -rotate-45 group-hover:rotate-0 transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Product Management</h3>
+                        <p class="text-gray-400 text-sm">Feature roadmaps and details on digital hubs like MbaExtras.</p>
+                    </div>
+                </a>
+
+                <!-- Work 4 & 5 (Combined in a nested grid for Bento feel) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a href="marketing-strategy.html" class="bento-card p-6 group flex flex-col justify-between">
+                        <div class="flex justify-end mb-8">
+                            <i class="fas fa-arrow-right text-gray-600 group-hover:text-white -rotate-45 group-hover:rotate-0 transition duration-300 text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Strategy</h3>
+                            <p class="text-gray-500 text-xs">End-to-End marketing.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="product-management.html" class="bento-card p-6 group flex flex-col justify-between bg-white/5">
+                         <div class="flex justify-end mb-8">
+                            <i class="fas fa-arrow-right text-gray-600 group-hover:text-white -rotate-45 group-hover:rotate-0 transition duration-300 text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">AI</h3>
+                            <p class="text-gray-500 text-xs">Learning the future.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- Certifications Slider -->
+   <section id="certifications" class="py-24 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto reveal">
+            <h2 class="text-3xl font-bold mb-12 text-white tracking-tight">Certifications</h2>
+            
+            <div class="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory no-scrollbar -mx-6 px-6">
+                
+                <a href="cert-powerbi.html" class="bento-card p-5 flex items-center min-w-[280px] shrink-0 snap-center group">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mr-4 group-hover:bg-white/10 transition">
+                        <i class="fas fa-chart-bar text-gray-400 group-hover:text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white text-sm">Microsoft Power BI</h4>
+                        <p class="text-xs text-gray-500">Udemy (2025)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-ai.html" class="bento-card p-5 flex items-center min-w-[280px] shrink-0 snap-center group">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mr-4 group-hover:bg-white/10 transition">
+                        <i class="fas fa-robot text-gray-400 group-hover:text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white text-sm">AI in Marketing</h4>
+                        <p class="text-xs text-gray-500">NPTL (2025)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-excel.html" class="bento-card p-5 flex items-center min-w-[280px] shrink-0 snap-center group">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mr-4 group-hover:bg-white/10 transition">
+                        <i class="fas fa-table text-gray-400 group-hover:text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white text-sm">Advanced Excel</h4>
+                        <p class="text-xs text-gray-500">Udemy (2024)</p>
+                    </div>
+                </a>
+                
+                <a href="cert-supplychain.html" class="bento-card p-5 flex items-center min-w-[280px] shrink-0 snap-center group">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mr-4 group-hover:bg-white/10 transition">
+                        <i class="fas fa-truck-fast text-gray-400 group-hover:text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white text-sm">Supply Chain Fund.</h4>
+                        <p class="text-xs text-gray-500">Udemy (2024)</p>
+                    </div>
+                </a>
+
+                <a href="certifications.html" class="bento-card p-5 flex items-center min-w-[280px] shrink-0 snap-center group border-dashed border-gray-700">
+                    <div class="w-10 h-10 rounded-xl bg-transparent flex items-center justify-center mr-4">
+                        <i class="fas fa-plus text-gray-500 group-hover:text-white transition"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-400 group-hover:text-white text-sm transition">View All</h4>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience List -->
+    <section id="resume" class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl font-bold mb-12 text-white tracking-tight">Experience</h2>
+            
+            <div class="space-y-6">
+                <!-- Job 1 -->
+                <div class="bento-card p-8 group">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-6 border-b border-white/5 pb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-gray-300 transition">Assistant Manager</h3>
+                            <p class="text-gray-500 text-sm mt-1">Xanadu Realty</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0">
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-3 py-1 rounded-md">Feb 2025 – Present</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 text-sm leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="text-gray-600 mr-3 mt-1">—</span>
+                            Drove over 200 walk-ins, directly resulting in a total revenue of ₹21 crores.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gray-600 mr-3 mt-1">—</span>
+                            Cultivated and managed relationships with over 200 channel partners in Navi Mumbai.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gray-600 mr-3 mt-1">—</span>
+                            Led and mentored a three-person pre-sales team, generating over 60 walk-ins.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="bento-card p-8 group">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-6 border-b border-white/5 pb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-gray-300 transition">Sales and Marketing Intern</h3>
+                            <p class="text-gray-500 text-sm mt-1">ITC Ltd.</p>
+                        </div>
+                        <div class="mt-2 sm:mt-0">
+                            <span class="text-xs font-mono text-gray-400 bg-white/5 px-3 py-1 rounded-md">Jun 2023 - Aug 2023</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 text-sm leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="text-gray-600 mr-3 mt-1">—</span>
+                            Successfully boosted M-O-M sales volume of premium portfolio of 'ESPB' division by 21 percent.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-gray-600 mr-3 mt-1">—</span>
+                            Executed a comprehensive sales forecast for future business strategies.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/10 text-center">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 Supradip Das.</p>
+            <div class="flex space-x-6">
+                <a href="https://linkedin.com/in/Supradip-das" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Scroll Animation Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
